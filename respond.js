@@ -7,5 +7,7 @@ self.addEventListener('message', function(e) {
     self.postMessage(`The total of ${e.data[1]} and ${e.data[2]} is: ` + sum);
   }
 
+  // Have a worker terminate itself.
+  self.close();
 
 }, false);
